@@ -1,51 +1,56 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '1.3.1:0',
+  version: '1.4.0:0',
   releaseNotes: {
-    en_US: `Bitkey support and track-only wallets.
+    en_US: `A redesigned PIN and new success screens.
 
-- Bitkey: connect your Bitkey by pasting its wallet descriptor from the Bitkey app. Its balance and history show in Control Center. Bitkey doesn't support proving ownership of its keys, so it stays Unverified and isn't included in statements.
-- Track a wallet: add an xpub or a wallet descriptor to watch its balance without proving you own it. Prove ownership later by adding the same wallet again with your device.
-- Add Account: simpler options, with Manually Sign and Track Balance, ETF, or xpub.
-- Manual accounts: the Portfolio chart now starts a manual account's balance on the date you chose, and removing one asks you to confirm first.
-- Security updates to third-party dependencies.
+- PIN: the lock, setup and Forgot PIN screens now match the introduction, and unlocking is faster. Resetting your PIN keeps your accounts and history as they are.
+- Adding accounts: every connection now ends on a success screen showing the device or app, its balance and whether it's verified.
+- Desktop: before you add your first account, choose Blockstream's public server, with the option to connect through Tor, or your own Electrum server.
+- Statements: where the app explains them, they're now called proof-of-ownership statements.
+- Safety: Control Center only watches your wallets, so it now refuses wallets that include a private key. If an earlier import saved one, it's replaced with the matching public key when you update.
+- Updates to third-party dependencies.
 
 Existing accounts, settings, and statements carry over automatically.`,
-    es_ES: `Compatibilidad con Bitkey y monederos de solo seguimiento.
+    es_ES: `Un PIN rediseñado y nuevas pantallas de confirmación.
 
-- Bitkey: conecta tu Bitkey pegando el descriptor de su monedero desde la app de Bitkey. Su saldo e historial aparecen en Control Center. Bitkey no permite demostrar la propiedad de sus claves, así que se mantiene como No verificado y no se incluye en los estados de cuenta.
-- Seguir un monedero: añade una xpub o un descriptor de monedero para ver su saldo sin demostrar que es tuyo. Puedes demostrar la propiedad más adelante añadiendo el mismo monedero con tu dispositivo.
-- Añadir cuenta: opciones más sencillas, con Firmar manualmente y Seguir saldo, ETF o xpub.
-- Cuentas manuales: el gráfico de Cartera ahora empieza el saldo de una cuenta manual en la fecha que elegiste, y al eliminar una se te pide confirmación.
-- Actualizaciones de seguridad de dependencias de terceros.
+- PIN: las pantallas de bloqueo, configuración y ¿Olvidaste tu PIN? ahora coinciden con la introducción, y el desbloqueo es más rápido. Restablecer tu PIN mantiene tus cuentas e historial tal como están.
+- Añadir cuentas: cada conexión termina ahora en una pantalla de confirmación que muestra el dispositivo o la app, su saldo y si está verificada.
+- Escritorio: antes de añadir tu primera cuenta, elige el servidor público de Blockstream, con la opción de conectarte a través de Tor, o tu propio servidor Electrum.
+- Estados de cuenta: donde la app los explica, ahora se llaman estados de cuenta de prueba de propiedad.
+- Seguridad: Control Center solo observa tus monederos, así que ahora rechaza los monederos que incluyen una clave privada. Si una importación anterior guardó una, se sustituye por la clave pública correspondiente al actualizar.
+- Actualizaciones de dependencias de terceros.
 
 Las cuentas, los ajustes y los estados de cuenta existentes se conservan automáticamente.`,
-    de_DE: `Bitkey-Unterstützung und Wallets zum reinen Beobachten.
+    de_DE: `Eine neu gestaltete PIN und neue Erfolgsbildschirme.
 
-- Bitkey: Verbinde deine Bitkey, indem du ihren Wallet-Deskriptor aus der Bitkey-App einfügst. Ihr Saldo und ihre Historie erscheinen in Control Center. Bitkey unterstützt keinen Nachweis des Schlüsselbesitzes, daher bleibt sie Unverifiziert und wird nicht in Kontoauszüge aufgenommen.
-- Wallet beobachten: Füge einen xpub oder einen Wallet-Deskriptor hinzu, um den Saldo zu verfolgen, ohne den Besitz nachzuweisen. Den Besitz kannst du später nachweisen, indem du dieselbe Wallet mit deinem Gerät erneut hinzufügst.
-- Konto hinzufügen: einfachere Optionen, mit Manuell signieren und Saldo verfolgen, ETF oder xpub.
-- Manuelle Konten: Das Portfolio-Diagramm beginnt den Saldo eines manuellen Kontos jetzt an dem von dir gewählten Datum, und vor dem Entfernen wirst du um Bestätigung gebeten.
-- Sicherheitsupdates für Abhängigkeiten von Drittanbietern.
+- PIN: Die Bildschirme zum Sperren, Einrichten und für „PIN vergessen“ passen jetzt zur Einführung, und das Entsperren geht schneller. Beim Zurücksetzen der PIN bleiben deine Konten und deine Historie unverändert.
+- Konten hinzufügen: Jede Verbindung endet jetzt auf einem Erfolgsbildschirm, der das Gerät oder die App, den Saldo und den Verifizierungsstatus zeigt.
+- Desktop: Bevor du dein erstes Konto hinzufügst, wählst du den öffentlichen Server von Blockstream, optional über Tor, oder deinen eigenen Electrum-Server.
+- Kontoauszüge: Wo die App sie erklärt, heißen sie jetzt Kontoauszüge zum Eigentumsnachweis.
+- Sicherheit: Control Center beobachtet deine Wallets nur und lehnt daher jetzt Wallets ab, die einen privaten Schlüssel enthalten. Hat ein früherer Import einen gespeichert, wird er beim Update durch den passenden öffentlichen Schlüssel ersetzt.
+- Updates für Abhängigkeiten von Drittanbietern.
 
 Bestehende Konten, Einstellungen und Kontoauszüge werden automatisch übernommen.`,
-    pl_PL: `Obsługa Bitkey i portfele tylko do śledzenia.
+    pl_PL: `Przeprojektowany PIN i nowe ekrany potwierdzenia.
 
-- Bitkey: połącz swój Bitkey, wklejając deskryptor portfela z aplikacji Bitkey. Jego saldo i historia pojawią się w Control Center. Bitkey nie obsługuje potwierdzania własności kluczy, więc pozostaje Niezweryfikowany i nie jest uwzględniany w wyciągach.
-- Śledzenie portfela: dodaj xpub lub deskryptor portfela, aby obserwować saldo bez potwierdzania własności. Własność możesz potwierdzić później, dodając ten sam portfel ponownie za pomocą swojego urządzenia.
-- Dodaj konto: prostsze opcje, z Ręcznym podpisem oraz Śledzeniem salda, ETF lub xpub.
-- Konta ręczne: wykres Portfela zaczyna teraz saldo konta ręcznego od wybranej przez Ciebie daty, a usunięcie konta wymaga potwierdzenia.
-- Aktualizacje zabezpieczeń zależności zewnętrznych.
+- PIN: ekrany blokady, konfiguracji i „Nie pamiętasz PIN-u?” pasują teraz do wprowadzenia, a odblokowanie jest szybsze. Zresetowanie PIN-u pozostawia Twoje konta i historię bez zmian.
+- Dodawanie kont: każde połączenie kończy się teraz ekranem potwierdzenia, który pokazuje urządzenie lub aplikację, saldo i to, czy konto jest zweryfikowane.
+- Wersja na komputer: zanim dodasz pierwsze konto, wybierz publiczny serwer Blockstream, z opcją połączenia przez Tor, albo własny serwer Electrum.
+- Wyciągi: tam, gdzie aplikacja je wyjaśnia, nazywają się teraz wyciągami potwierdzającymi własność.
+- Bezpieczeństwo: Control Center tylko obserwuje Twoje portfele, więc odrzuca teraz portfele zawierające klucz prywatny. Jeśli wcześniejszy import zapisał taki klucz, przy aktualizacji zostanie on zastąpiony odpowiadającym mu kluczem publicznym.
+- Aktualizacje zależności zewnętrznych.
 
 Istniejące konta, ustawienia i wyciągi zostają przeniesione automatycznie.`,
-    fr_FR: `Prise en charge de Bitkey et portefeuilles en suivi seul.
+    fr_FR: `Un code PIN repensé et de nouveaux écrans de confirmation.
 
-- Bitkey : connectez votre Bitkey en collant le descripteur de son portefeuille depuis l'app Bitkey. Son solde et son historique s'affichent dans Control Center. Bitkey ne permet pas de prouver la propriété de ses clés : il reste donc Non vérifié et n'est pas inclus dans les relevés.
-- Suivre un portefeuille : ajoutez une xpub ou un descripteur de portefeuille pour suivre son solde sans prouver qu'il vous appartient. Vous pourrez prouver la propriété plus tard en ajoutant le même portefeuille avec votre appareil.
-- Ajouter un compte : des options plus simples, avec Signer manuellement et Suivre le solde, ETF ou xpub.
-- Comptes manuels : le graphique Portefeuille fait désormais commencer le solde d'un compte manuel à la date choisie, et sa suppression demande une confirmation.
-- Mises à jour de sécurité des dépendances tierces.
+- Code PIN : les écrans de verrouillage, de configuration et « Code PIN oublié » sont désormais assortis à l'introduction, et le déverrouillage est plus rapide. Réinitialiser votre code PIN laisse vos comptes et votre historique tels quels.
+- Ajout de comptes : chaque connexion se termine désormais sur un écran de confirmation qui montre l'appareil ou l'app, son solde et s'il est vérifié.
+- Ordinateur : avant d'ajouter votre premier compte, choisissez le serveur public de Blockstream, avec la possibilité de vous connecter via Tor, ou votre propre serveur Electrum.
+- Relevés : là où l'app les explique, ils s'appellent désormais relevés de preuve de propriété.
+- Sécurité : Control Center ne fait que suivre vos portefeuilles ; il refuse donc désormais les portefeuilles qui contiennent une clé privée. Si une importation antérieure en a enregistré une, elle est remplacée par la clé publique correspondante lors de la mise à jour.
+- Mises à jour des dépendances tierces.
 
 Les comptes, paramètres et relevés existants sont conservés automatiquement.`,
   },
