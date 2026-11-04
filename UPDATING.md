@@ -13,5 +13,4 @@ Upstream tags look like `v1.0.0_0` (StartOS version `1.0.0:0`). The image tag dr
 ## Applying the bump
 
 1. Set `dockerTag` in `startos/manifest/index.ts` to `ghcr.io/hoseki-inc/bitcoin-control-center:<image tag>`.
-2. Set `version` in `startos/versions/current.ts` to the matching StartOS version, and replace `releaseNotes` in every locale.
-3. A migration belongs to the version that introduced it: if the outgoing `current.ts` carries one, move it to its own `startos/versions/v<version>.ts` first and list it in `startos/versions/index.ts` (see Start9's versions guide).
+2. Set `version` in `startos/versions/current.ts` to the matching StartOS version.
